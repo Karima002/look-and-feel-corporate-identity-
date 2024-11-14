@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="testdarkmode.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello darkness</h1>
+
+    <!--  een fieldset met drie radio-buttons waarmee een gebruiker een kleurenschema kan selecteren.-->
+    <fieldset>
+        <label>
+          <input type="radio" name="color-scheme" id="color-scheme-light" value="0"> <!--Light: Met value="0", waarmee een lichte modus kan worden ingesteld.-->
+          Light
+        </label>
+        <label>
+          <input type="radio" name="color-scheme" value="auto" checked> <!--Is automatisch geselecteerd als en volgt de instellingen van het apparaat-->
+          Auto
+        </label>
+        <label>
+          <input type="radio" name="color-scheme" id="color-scheme-dark" value="1"> <!--Met value="1" voor een donkere modus.-->
+          Dark
+        </label>
+      </fieldset>
+      
+</body>
+</html>

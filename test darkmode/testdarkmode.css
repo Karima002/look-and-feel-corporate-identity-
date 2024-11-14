@@ -1,0 +1,53 @@
+:where(html) {
+  --darkmode: 0;   /* Standaardwaarde voor donkere modus is uitgeschakeld */
+  container-name: root;
+  container-type: normal;
+}
+
+body {
+  --background-color: #FFF;  /* Achtergrondkleur ingesteld op wit */
+  --text-color: #222;   /* Tekstkleur ingesteld op donkergrijs */
+  background-color: var(--background-color);  /* Past achtergrondkleur toe via variabele */
+  color: var(--text-color);     /* Past tekstkleur toe via variabele */
+  color-scheme: light dark;     /* Ondersteunt zowel licht als donker thema */
+  font-family: ui-sans-serif, system-ui, sans-serif;  /* Definieert lettertype */
+}
+
+@media (prefers-color-scheme: dark) { 
+  html { --darkmode: 1; } /* Zet donkere modus aan bij voorkeur donker thema */
+}
+@media (prefers-color-scheme: light) {
+  html { --darkmode: 0; } /* Zet donkere modus uit bij voorkeur licht thema */
+}
+
+html:has(#color-scheme-light:checked) { --darkmode: 0; }  /* Handmatig geselecteerd licht thema */
+html:has(#color-scheme-dark:checked) { --darkmode: 1; }  /* Handmatig geselecteerd donker thema */
+
+
+@container root style(--darkmode: 1) {
+  body {
+    --background-color: hsl(228, 5%, 15%); /* Donkere achtergrond in HSL */
+    --text-color: hsl(228, 5%, 80%);  /* Donkere achtergrond in HSL */
+  }
+}
+
+/* DEMO voor de knoppen*/
+.toggle-group {
+  border: 2px solid #CCC;
+  border-radius: 24px;
+  inline-size: fit-content;
+  padding: 3px;
+}
+.toggle-group label {
+  border-radius: 21px;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0.5em 1em;
+  text-align: center;
+  user-select: none;
+}
+.toggle-group label:has(input:checked) {
+  background-color: #CCC;
+  color: #333;
+}
+
