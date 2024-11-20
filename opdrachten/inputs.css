@@ -1,34 +1,34 @@
 /* CSS voor de eerste form input */
 fieldset {
-    display: grid;
-    gap: 2em;
+    display: grid; /* Zorgt ervoor dat de inhoud van het fieldset een grid-layout volgt */
+    gap: 2em; /* Afstand tussen de rijen/kolommen in de grid */
 }
 
 legend {
-    font-family: verdana, sans-serif;
-    font-size: 1rem;
+    font-family: verdana, sans-serif; /* Gebruik Verdana of een sans-serif-lettertype als fallback */
+    font-size: 1rem; /* Lettergrootte is 1rem*/
 }
 
 
 input {
-    background-color: #b6b7de;
-    color: rgb(196, 75, 75);
-
-    font-size:1em;
-
-    padding:.5em;
+    background-color: #b6b7de;  /* Lichtblauwe achtergrondkleur */
+    color: rgb(196, 75, 75); /* Donkerrode tekstkleur */
+    font-size:1em;  /* Lettergrootte is 1em */
+    padding:.5em; 
 }
 
+/* Specifieke styling voor input van type datetime-local */
 [type="datetime-local"]{
-    color:blue;
+    color:blue;  /* Tekstkleur is blauw */
 }
 
+/* Specifieke styling voor input van type email */
 [type="email"]{
-    background-color: lightyellow;
-
-    background-image: linear-gradient(45deg, red,green);
-    background-size: 2em 2em;
-    background-repeat: no-repeat;
-    background-position: .25em center;
-    padding:.75em .75em .75em 2.5em;
+    background-color: lightyellow;  /* Lichtgele achtergrondkleur */
+    /* background-image: linear-gradient(45deg, red,green); */
+    background-image: url("envolopimage.jpg"); /* Achtergrondafbeelding van een envelop */
+    background-size: 2em 2em;  /* Schaalt de afbeelding naar 2em bij 2em */
+    background-repeat: no-repeat; /* Voorkom herhaling van de afbeelding */
+    background-position: .25em center; /* Plaats de afbeelding iets naar links en gecentreerd verticaal */
+    padding:.75em .75em .75em 2.5em; /*2.5em als padding is door de de breedte van de afbeelding van 2em op te tellen met de position van de background (.25em) vanaf 2.5 begint de tekst. */
 }
