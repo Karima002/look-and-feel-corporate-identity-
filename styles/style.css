@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Reset alle marges en opvullingen om standaard browserstijlen te voorkomen */
+
+
+body {
+    background-color: #fff; /* Achtergrondkleur voor een schone, witte achtergrond */
+}
+
+/* CSS voor de eerste navigatiebar */
+.eerste-navigatiebar {
+    background-color: black;
+    position: sticky;
+}
+
+.eerste-navigatiebar ul { 
+    display: flex; /* Flexbox zorgt ervoor dat de lijstitems naast elkaar worden geplaatst */
+    justify-content: right; /* De content wordt aan de rechterkant uitgelijnd */
+    gap: 1em; /* Er is een ruimte van 1em tussen de items */
+}
+
+.eerste-navigatiebar a {
+    color:#fff; 
+    line-height: 3em; /* De hoogte van de tekstregel is 3em voor verticale uitlijning */
+    font-size: 11px; /* De tekengrootte is 11px */
+    text-decoration: none; /* Onderstreping van de tekst is uitgeschakeld */
+    font-family: "Inter", sans-serif;
+}
+
+.eerste-navigatiebar .svg-search { 
+    margin-top: .6em; /*De svg stond niet op de goede plaats. Hiermee is de svg op de goede plek gepositioneerd*/
+    margin-right: 1em;
+}

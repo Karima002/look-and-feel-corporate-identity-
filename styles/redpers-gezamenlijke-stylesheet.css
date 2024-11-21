@@ -3,7 +3,7 @@
 /*  TIEMPOS TEXT is for article text */
 /*  INTER is for regular text, small headers and other pieces of text */
 @font-face {
-    font-family: "Tiempos Text";
+    font-family: "Tiempos Text regular";
     src: url("fonts/TiemposText-Regular.woff2") format("woff2"),
          url("fonts/TiemposText-Regular.woff") format("woff"),
          url("fonts/TiemposText-Regular.otf") format("opentype");
@@ -12,7 +12,7 @@
    }
    
    @font-face {
-    font-family: "Tiempos Text";
+    font-family: "Tiempos Text italic";
     src: url("fonts/TiemposText-RegularItalic.woff2") format("woff2"),
          url("fonts/TiemposText-RegularItalic.woff") format("woff"),
          url("fonts/TiemposText-RegularItalic.otf") format("opentype");
