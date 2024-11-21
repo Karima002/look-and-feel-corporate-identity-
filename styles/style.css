@@ -6,13 +6,12 @@
 
 
 body {
-    background-color: #fff; /* Achtergrondkleur voor een schone, witte achtergrond */
+    background-color: var(--white); /* Achtergrondkleur voor een witte achtergrond */
 }
 
 /* CSS voor de eerste navigatiebar */
 .eerste-navigatiebar {
-    background-color: black;
-    position: sticky;
+    background-color: var(--black);
 }
 
 .eerste-navigatiebar ul { 
@@ -22,11 +21,11 @@ body {
 }
 
 .eerste-navigatiebar a {
-    color:#fff; 
+    color:var(--white); 
     line-height: 3em; /* De hoogte van de tekstregel is 3em voor verticale uitlijning */
-    font-size: 11px; /* De tekengrootte is 11px */
+    font-size: var(--font-size-menu); /* De tekengrootte is 11px */
     text-decoration: none; /* Onderstreping van de tekst is uitgeschakeld */
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-default);
 }
 
 .eerste-navigatiebar .svg-search { 
@@ -59,10 +58,11 @@ body {
 .ondertitel-logo {
     grid-column: 1/2;
     grid-row: 2/3;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-default);
     text-transform: uppercase; 
-    font-size: 10px; /* De ondertitel van het logo is in hoofdletters*/
+    font-size: var(--font-size-meta); /* De ondertitel van het logo is in hoofdletters*/
     margin-left: 1.5em; /*een marge aan de linkerkant */
+
 
 }
 
@@ -73,10 +73,10 @@ body {
     font-size: 1px;
 }
 
-
+/* CSS voor de tweede navigatiebar*/
 .tweede-navigatiebar {
-    background-color: #fff;
-    border: solid #E1E1E1 .5px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
+    background-color: var(--white);
+    border: solid var(--lightgrey) .5px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
     margin-bottom: 5em; /*en een marge aan de onderkant voor extra ruimte */
 }
 
@@ -89,8 +89,60 @@ body {
 
 .tweede-navigatiebar a{
     text-decoration: none; /* De links in de tweede navigatiebalk hebben geen onderstreping */
-    color: black;
+    color: var(--black);
     line-height: 2.5em;
-    font-family: "Inter", sans-serif; /* Tekst wordt weergegeven in het Inter-lettertype, 13px groot */
-    font-size: 13px; 
+    font-family: var(--font-default);/* Tekst wordt weergegeven in het Inter-lettertype, 13px groot */
+    font-size: var(--font-size-menu); 
+}
+
+/* CSS voor de voorpagina nieuws artikel */
+main {
+    padding: 1em 7em 0 7em; /*De hoofdsectie heeft padding aan de boven-, rechter- en linkerzijde: met de klok mee:*/
+    display: grid;
+}
+
+.frontpage-news {
+    display: grid; /* Grid lay-out voor de titelsectie met vier rijen en drie kolommen */
+    grid-template-rows: min-content 1fr;
+    grid-template-areas: /*grid template areas voor de tekst, img en buttons */
+    "text1 img"
+    "text2 img"
+    "text3 img"
+    "text4 img";
+    row-gap: .7em;
+    column-gap: 4em;
+}
+
+.category-frontpage {
+    grid-area: text1;
+    font-family: var(--font-default);
+    font-size: var(--font-size-menu);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.title-article {
+    grid-area: text2;
+    font-family: "Tiempos Headline";
+    font-size: var(--font-size-header-xxl);
+    letter-spacing: var(--letter-spacing-s);
+    line-height: var(--line-height-xs);       
+}
+
+.undertitle {
+    grid-area: text3;
+    font-family: var(--font-default); /* De ondertitel wordt weergegeven in het Inter-lettertype, 16px groot */
+    font-weight: 250;
+    font-size: var(--font-size-intro);
+}
+
+.author {
+    grid-area: text4;
+    font-family: var(--font-default);
+    font-size: var(--font-size-header-xs);
+}
+
+.frontpage-image {
+    grid-area: img;
 }
