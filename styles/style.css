@@ -33,3 +33,64 @@ body {
     margin-top: .6em; /*De svg stond niet op de goede plaats. Hiermee is de svg op de goede plek gepositioneerd*/
     margin-right: 1em;
 }
+
+/* CSS voor de logo, ondertitel, en doneerknop */
+.section-logo-boven {
+    display: grid; /* Grid lay-out voor de bovenste sectie, met drie kolommen en twee rijen */
+    grid-template-columns: 1.5fr 5fr .5fr;
+    grid-template-rows: 1fr 1fr;
+    /* @media only screen and (min-width: 390px) {
+        grid-template-columns: .2fr 1fr .5fr;
+        grid-template-rows: 1fr;
+    } */
+}
+
+.logo-boven {
+    grid-column: 1/2; /* Het logo bevindt zich in de eerste kolom en rij, met marges boven en links */
+    grid-row: 1/2;
+    margin-top: 1em;
+    margin-left: 1.1em;
+    /* @media (min-width: 390px) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    } */
+}
+
+.ondertitel-logo {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase; 
+    font-size: 10px; /* De ondertitel van het logo is in hoofdletters*/
+    margin-left: 1.5em; /*een marge aan de linkerkant */
+
+}
+
+.button-doneren{
+    grid-column: 3/4; /* De doneerknop bevindt zich in de derde kolom en eerste rij, met een marge aan de bovenkant */
+    grid-row: 1/2;
+    margin-top: 5em;
+    font-size: 1px;
+}
+
+
+.tweede-navigatiebar {
+    background-color: #fff;
+    border: solid #E1E1E1 .5px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
+    margin-bottom: 5em; /*en een marge aan de onderkant voor extra ruimte */
+}
+
+.tweede-navigatiebar ul {
+    display: flex; /*Met display flex komen de items naast elkaar te staan. Tegen de ul wordt gezegd dat geflext moet worden */
+    justify-content: center; /*lijstitems worden gecentreerd met een ruimte van 1em tussen de items */
+    gap: 1em; 
+    list-style: none;
+}
+
+.tweede-navigatiebar a{
+    text-decoration: none; /* De links in de tweede navigatiebalk hebben geen onderstreping */
+    color: black;
+    line-height: 2.5em;
+    font-family: "Inter", sans-serif; /* Tekst wordt weergegeven in het Inter-lettertype, 13px groot */
+    font-size: 13px; 
+}
