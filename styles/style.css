@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: 0; /* Verwijdert standaard marges */
     padding: 0;
 }
 /* Reset alle marges en opvullingen om standaard browserstijlen te voorkomen */
@@ -11,7 +11,8 @@ body {
 
 /* CSS voor de eerste navigatiebar */
 .eerste-navigatiebar {
-    background-color: var(--black);
+    background-color: var(--black); /* Zwarte achtergrondkleur voor de eerste navigatiebalk: variabel uit de gezamenlijke stylesheet */
+
 }
 
 .eerste-navigatiebar ul { 
@@ -25,41 +26,34 @@ body {
     line-height: 3em; /* De hoogte van de tekstregel is 3em voor verticale uitlijning */
     font-size: var(--font-size-menu); /* De tekengrootte is 11px */
     text-decoration: none; /* Onderstreping van de tekst is uitgeschakeld */
-    font-family: var(--font-default);
+    font-family: var(--font-default);  /* Lettertype wordt bepaald door de variabel uit de gezamenlijke stylesheet  */
 }
 
-.eerste-navigatiebar .svg-search { 
+.eerste-navigatiebar { 
     margin-top: .6em; /*De svg stond niet op de goede plaats. Hiermee is de svg op de goede plek gepositioneerd*/
-    margin-right: 1em;
+    margin-right: 1em; /* Voegt ruimte toe aan de rechterkant van de svg */
 }
 
 /* CSS voor de logo, ondertitel, en doneerknop */
 .section-logo-boven {
     display: grid; /* Grid lay-out voor de bovenste sectie, met drie kolommen en twee rijen */
-    grid-template-columns: 1.5fr 5fr .5fr;
-    grid-template-rows: 1fr 1fr;
-    /* @media only screen and (min-width: 390px) {
-        grid-template-columns: .2fr 1fr .5fr;
-        grid-template-rows: 1fr;
-    } */
+    grid-template-columns: 1.5fr 5fr .5fr; /*Column verdeling in grid*/
+    grid-template-rows: 1fr 1fr; /*row verdeling in grid*/
+   
 }
 
 .logo-boven {
     grid-column: 1/2; /* Het logo bevindt zich in de eerste kolom en rij, met marges boven en links */
-    grid-row: 1/2;
-    margin-top: 1em;
-    margin-left: 1.1em;
-    /* @media (min-width: 390px) {
-        grid-column: 2/3;
-        grid-row: 1/2;
-    } */
+    grid-row: 1/2; /* Het logo bevindt zich in de eerste rij */
+    margin-top: 1em; /* Margin boven het logo */
+    margin-left: 1.1em;  /* Ruimte links van de logo */
 }
 
 .ondertitel-logo {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    font-family: var(--font-default);
-    text-transform: uppercase; 
+    grid-column: 1/2; /* De ondertitel bevindt zich in de eerste kolom */
+    grid-row: 2/3; /* De ondertitel bevindt zich in de tweede rij */
+    font-family: var(--font-default); /* Lettertype bepaald door variabel uit de gezamenlijke stylesheet */
+    text-transform: uppercase;  /* Hoofdletters voor de tekst */
     font-size: var(--font-size-meta); /* De ondertitel van het logo is in hoofdletters*/
     margin-left: 1.5em; /*een marge aan de linkerkant */
 
@@ -68,14 +62,13 @@ body {
 
 .button-doneren{
     grid-column: 3/4; /* De doneerknop bevindt zich in de derde kolom en eerste rij, met een marge aan de bovenkant */
-    grid-row: 1/2;
-    margin-top: 5em;
-    font-size: 1px;
+    grid-row: 1/2; /* De doneerknop bevindt zich in de eerste rij */
+    margin-top: 5em;  /* Ruimte boven de doneerknop */
 }
 
 /* CSS voor de tweede navigatiebar*/
 .tweede-navigatiebar {
-    background-color: var(--white);
+    background-color: var(--white); /* Witte achtergrondkleur voor de tweede navigatiebalk, variabel uit de gezamenlijke stylesheet*/
     border: solid var(--lightgrey) .5px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
     margin-bottom: 5em; /*en een marge aan de onderkant voor extra ruimte */
 }
@@ -84,48 +77,48 @@ body {
     display: flex; /*Met display flex komen de items naast elkaar te staan. Tegen de ul wordt gezegd dat geflext moet worden */
     justify-content: center; /*lijstitems worden gecentreerd met een ruimte van 1em tussen de items */
     gap: 1em; 
-    list-style: none;
+    list-style: none; 
 }
 
 .tweede-navigatiebar a{
     text-decoration: none; /* De links in de tweede navigatiebalk hebben geen onderstreping */
-    color: var(--black);
-    line-height: 2.5em;
+    color: var(--black); /* Zwarte tekstkleur voor links, variabel uit de gezamenlijke stylesheet*/
+    line-height: 2.5em; /* Hoogte van de tekstregel */
     font-family: var(--font-default);/* Tekst wordt weergegeven in het Inter-lettertype, 13px groot */
-    font-size: var(--font-size-menu); 
+    font-size: var(--font-size-menu);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
 }
 
 /* CSS voor de voorpagina nieuws artikel */
 main {
     padding: 1em 7em 0 7em; /*De hoofdsectie heeft padding aan de boven-, rechter- en linkerzijde: met de klok mee:*/
-    display: grid;
+    display: grid; /* Grid lay-out voor de main section */
 }
 
 .frontpage-news {
     display: grid; /* Grid lay-out voor de titelsectie met vier rijen en drie kolommen */
     grid-template-rows: min-content 1fr;
-    grid-template-areas: /*grid template areas voor de tekst, img en buttons */
+    grid-template-areas: /*grid template areas voor de tekst en img */
     "text1 img"
     "text2 img"
     "text3 img"
     "text4 img";
-    row-gap: .7em;
-    column-gap: 4em;
+    row-gap: .7em; /* Ruimte tussen rijen */
+    column-gap: 4em; /* Ruimte tussen kolommen */
 }
 
 .category-frontpage {
-    grid-area: text1;
-    font-family: var(--font-default);
-    font-size: var(--font-size-menu);
-    color: var(--primary-color);
+    grid-area: text1; /* Positie van een area in de grid */
+    font-family: var(--font-default); /* Lettertype bepaald door variabel uit de gezamenlijke stylesheet */
+    font-size: var(--font-size-menu); /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
+    color: var(--primary-color); 
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: bold; /* Vetgedrukte tekst */
 }
 
 .title-article {
     grid-area: text2;
     font-family: "Tiempos Headline";
-    font-size: var(--font-size-header-xxl);
+    font-size: var(--font-size-header-xxl);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
     letter-spacing: var(--letter-spacing-s);
     line-height: var(--line-height-xs);       
 }
@@ -133,14 +126,14 @@ main {
 .undertitle {
     grid-area: text3;
     font-family: var(--font-default); /* De ondertitel wordt weergegeven in het Inter-lettertype, 16px groot */
-    font-weight: 250;
-    font-size: var(--font-size-intro);
+    font-weight: 250; /* Dunne tekststijl */
+    font-size: var(--font-size-intro);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
 }
 
 .author {
     grid-area: text4;
     font-family: var(--font-default);
-    font-size: var(--font-size-header-xs);
+    font-size: var(--font-size-header-xs);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
 }
 
 .frontpage-image {
