@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/redpers-gezamenlijke-stylesheet.css">
+    <link rel="stylesheet" href="specificity.css">
+
+</head>
+<body>
+    <!-- Experiment 1: heading krijgt een midnightblue kleur omdat de specifity.css later wordt ingeladen  -->
+    <h2 class="h2.heading_article">Ik ben een heading, welke kleur krijg ik?</h2>
+    <h2>Ik ben ook een heading, welke kleur krijg ik?</h2>
+
+    <!-- Experiment 2: de spatie geeft een tweede class aan. -->
+    <h2 class="h2.heading_quote pink">Ik ben een heading met twee classes</h2>
+
+    <!-- Experiment 3:  Class volgorde-->
+    <h2 class="h2.heading_article">Ik ben een heading, welke kleur krijg ik?</h2>
+
+    <!-- Experiment 4: ID selector -->
+    <h2 class="h2.heading_article" id="heading">Ik ben een heading met een ID</h2>
+</body>
+</html>

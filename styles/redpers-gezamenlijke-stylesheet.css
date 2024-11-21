@@ -107,7 +107,7 @@
    
    h1,
    .h1 {
-    /* give an element h1 class if you want a bigger title without having multiple h1 elements on the sdame page */
+    /* give an element h1 class if you want a bigger title without having multiple h1 elements on the same page */
     font-size: var(--font-size-header-l);
     color: var(--black);
     line-height: var(--line-height-xs);
