@@ -1,9 +1,11 @@
+/* CSS voor de header en navigatiebar */
 header {
     display: flex; /*elementen in de header gaan flexen*/
     justify-content:space-between; /*geeft spacing tussen de items*/
     align-items:center; /* Zorgt ervoor dat alle items in de header verticaal gecentreerd worden binnen de hoogte van de header. */
     position: sticky; /* Zorgt ervoor dat de header vast blijft staan bovenaan de pagina wanneer je scrollt. */
     top:0; /* Geeft aan dat de header zich aan de bovenkant van het scherm blijft wanneer hij 'sticky' is. */
+    background-color: white;
         @media (min-width:46em) {
             button {
                 display: none; /*Op een width van 48em (736px) passen alle menubalk knoppen. Op dat moment is de menbalk-icoon niet meer nodig. Deze wordt hiermee verbor*/
@@ -78,15 +80,14 @@ ul {
     font-size: 13px; 
 }
 
-main {
-    padding: 1em 1em 0 1em; /*De hoofdsectie heeft padding aan de boven-, rechter- en linkerzijde: met de klok mee:*/
-    display: grid; /* Grid lay-out voor de main section */
-        @media (min-width:46em) {
-            padding: 5em 7em 0 6em;
-        }
+.frontpage-image {
+    align-content: center;
 }
+/* CSS voor de main: voorpaginan nieuws */
 
 .frontpage-news {
+    padding: 1em 1em 0 1em; /*De hoofdsectie heeft padding aan de boven-, rechter- en linkerzijde: met de klok mee:*/
+    display: grid; /* Grid lay-out voor de main section */
     @media (min-width: 46em) {
         display: grid; /* Grid lay-out voor de titelsectie met vier rijen en drie kolommen */
         grid-template-rows: min-content;
@@ -97,7 +98,9 @@ main {
         "text4 img";
         row-gap: .7em; /* Ruimte tussen rijen */
         column-gap: 4em; /* Ruimte tussen kolommen */
-    }
+
+            padding: 7em 7em 0 6em;
+    } 
 }
 
 .category-frontpage {
@@ -151,4 +154,30 @@ main {
         grid-area: img;
         padding-top: 5em;
     }
+}
+
+/* CSS voor de eerste carosel */
+.carosel-1 {
+    padding: 3em 7em 3em 6em; /* Zet de padding rondom de main, beginnend met top */
+    @media (max-width: 46em) { /* Voor schermen die maximaal 725px zijn wordt de onderstaande regel uitgevoerd */
+        padding: 3em 5em 2em 5em; /* Pas de padding aan voor kleinere schermen */
+    }
+}
+
+.carosel-binnenland {
+    padding: 0; /* Verwijdert de standaard padding van de <ul> */
+    list-style-type: none; /* Verwijdert de standaard opsommingstekens */
+    display: flex; /* Maakt de <ul> een flex-container */
+    gap: 1em; /* Ruimte tussen de items */
+    overflow-x: auto; /* Maakt horizontaal scrollen mogelijk */
+    scroll-snap-type: x mandatory; /* Zet automatisch centreren bij scrollen aan op de x-as: als je scrolt komt de meest dichtsbijzijnde foto op de focus */
+	overscroll-behavior-x: contain;  /* Beperkt het horizontale scrollgedrag: vermijdt het swipen naar een andere pagina  */
+    width: 100%; /* Zet de breedte van de <ul> op 100% */
+    
+}
+
+li-carosel-1 {
+	scroll-snap-align: center; /* Stelt het item in op centreren bij het scrollen */
+    min-width: 150px; /* Stelt de minimale breedte van elk <li>-element in */
+    gap: 2em; /*Ruimte tussen de li'tjes*/
 }
