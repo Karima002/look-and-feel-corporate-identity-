@@ -157,6 +157,12 @@ ul {
 }
 
 /* CSS voor de eerste carosel */
+
+.category-caro {
+    font-family: var(--font-default);
+    font-weight: 300;
+}
+
 .carosel-1 {
     padding: 3em 7em 3em 6em; /* Zet de padding rondom de main, beginnend met top */
     @media (max-width: 46em) { /* Voor schermen die maximaal 725px zijn wordt de onderstaande regel uitgevoerd */
@@ -173,5 +179,11 @@ ul {
     scroll-snap-type: x mandatory; /* Zet automatisch centreren bij scrollen aan op de x-as: als je scrolt komt de meest dichtsbijzijnde foto op de focus */
 	overscroll-behavior-x: contain;  /* Beperkt het horizontale scrollgedrag: vermijdt het swipen naar een andere pagina  */
     width: 100%; /* Zet de breedte van de <ul> op 100% */
-    
 }
+
+.h3 {
+    text-decoration: none;  /* Verwijdert de onderstreping van de link */
+    font-weight: 710;
+}
+
+
