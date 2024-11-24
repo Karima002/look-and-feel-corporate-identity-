@@ -81,7 +81,7 @@ ul {
 }
 
 .frontpage-image {
-    align-content: center;
+    align-items: center;
 }
 /* CSS voor de main: voorpaginan nieuws */
 
@@ -164,7 +164,7 @@ ul {
     }
 }
 
-.carosel-binnenland {
+.carousel-list {
     padding: 0; /* Verwijdert de standaard padding van de <ul> */
     list-style-type: none; /* Verwijdert de standaard opsommingstekens */
     display: flex; /* Maakt de <ul> een flex-container */
@@ -174,10 +174,4 @@ ul {
 	overscroll-behavior-x: contain;  /* Beperkt het horizontale scrollgedrag: vermijdt het swipen naar een andere pagina  */
     width: 100%; /* Zet de breedte van de <ul> op 100% */
     
-}
-
-li-carosel-1 {
-	scroll-snap-align: center; /* Stelt het item in op centreren bij het scrollen */
-    min-width: 150px; /* Stelt de minimale breedte van elk <li>-element in */
-    gap: 2em; /*Ruimte tussen de li'tjes*/
 }
