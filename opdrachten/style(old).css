@@ -12,6 +12,8 @@ body {
 /* CSS voor de eerste navigatiebar */
 .eerste-navigatiebar {
     background-color: var(--black); /* Zwarte achtergrondkleur voor de eerste navigatiebalk: variabel uit de gezamenlijke stylesheet */
+    margin-top: .6em; /*De svg stond niet op de goede plaats. Hiermee is de svg op de goede plek gepositioneerd*/
+    margin-right: 1em; /* Voegt ruimte toe aan de rechterkant van de svg */
 
 }
 
@@ -29,10 +31,7 @@ body {
     font-family: var(--font-default);  /* Lettertype wordt bepaald door de variabel uit de gezamenlijke stylesheet  */
 }
 
-.eerste-navigatiebar { 
-    margin-top: .6em; /*De svg stond niet op de goede plaats. Hiermee is de svg op de goede plek gepositioneerd*/
-    margin-right: 1em; /* Voegt ruimte toe aan de rechterkant van de svg */
-}
+
 
 /* CSS voor de logo, ondertitel, en doneerknop */
 .section-logo-boven {

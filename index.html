@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-       <!-- link naar de stylesheet -->
-       <link rel="stylesheet" href="styles/style.css">
-       <!-- link naar gezamenlijke stylesheet -->
-       <link rel="stylesheet" href="https://divaninl.github.io/redpers-styleguide/redpers.css">
+        <!-- link naar de stylesheet -->
+        <link rel="stylesheet" href="styles/style.css">
+        <!-- link naar gezamenlijke stylesheet -->
+        <link rel="stylesheet" href="https://divaninl.github.io/redpers-styleguide/redpers.css">
        <!-- link naar de inter lettertype -->
        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
    </head>
@@ -22,7 +22,7 @@
             </svg>
         </button>
 
-        <nav>
+        <!-- <nav>
             <button><svg width="40" height="40" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="36" height="36" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 26.0303C9.67678 25.7374 9.67678 25.2626 9.96967 24.9697L24.9697 9.96967C25.2626 9.67678 25.7374 9.67678 26.0303 9.96967C26.3232 10.2626 26.3232 10.7374 26.0303 11.0303L11.0303 26.0303C10.7374 26.3232 10.2626 26.3232 9.96967 26.0303Z" fill="black"/>
@@ -30,25 +30,25 @@
                 </svg>                
             </button>
 
-            <ul>
-                <li><a class="active" href="https://redpers.nl/category/rubriek/voorpagina/" alt="voorpagina">Voorpagina</a></li>
-                <li><a href="https://redpers.nl/category/rubriek/binnenland/" alt="Binnenland">Binnenland</a></li>
-                <li><a href="https://redpers.nl/category/rubriek/buitenland/" alt="Buitenland">Buitenland</a></li>
-                <li><a href="https://redpers.nl/category/rubriek/column/" alt="Column's">Column's</a></li>
-                <li><a href="https://redpers.nl/category/rubriek/economie/" alt="Economie">Economie</a></li>
-                <li><a href="https://redpers.nl/category/rubriek/podcast/" alt="Kunst & Media">Kunst & Media</a></li>
-                <li><a href="https://redpers.nl/category/rubriek/politiek/" alt="Politiek">Politiek</a></li>
-                <li><a href="https://redpers.nl/category/rubriek/wetenschap/">Wetenschap</a></li>
-            </ul>
-
-            <ul>
-                <li><a href="https://redpers.nl/colofon/">Colofon</a></li>
-                <li><a href="https://redpers.nl/contact/">Contact</a></li>
-                <li><a href="">Doneren</a></li>
-                <li><a href="https://redpers.nl/meedoen/">Meedoen</a></li>
-                <li><a href="https://redpers.nl/over-red-pers/">Over Redpers</a></li>
-            </ul>
-        </nav>
+                <ul class="first-nav">
+                    <li><a href="https://redpers.nl/colofon/">Colofon</a></li>
+                    <li><a href="https://redpers.nl/contact/">Contact</a></li>
+                    <li><a href="">Doneren</a></li>
+                    <li><a href="https://redpers.nl/meedoen/">Meedoen</a></li>
+                    <li><a href="https://redpers.nl/over-red-pers/">Over Redpers</a></li>
+                </ul>
+           
+                <ul class="second-nav">
+                    <li><a class="active" href="https://redpers.nl/category/rubriek/voorpagina/" alt="voorpagina">Voorpagina</a></li>
+                    <li><a href="https://redpers.nl/category/rubriek/binnenland/" alt="Binnenland">Binnenland</a></li>
+                    <li><a href="https://redpers.nl/category/rubriek/buitenland/" alt="Buitenland">Buitenland</a></li>
+                    <li><a href="https://redpers.nl/category/rubriek/column/" alt="Column's">Column's</a></li>
+                    <li><a href="https://redpers.nl/category/rubriek/economie/" alt="Economie">Economie</a></li>
+                    <li><a href="https://redpers.nl/category/rubriek/podcast/" alt="Kunst & Media">Kunst & Media</a></li>
+                    <li><a href="https://redpers.nl/category/rubriek/politiek/" alt="Politiek">Politiek</a></li>
+                    <li><a href="https://redpers.nl/category/rubriek/wetenschap/">Wetenschap</a></li>
+                </ul>    
+        </nav> -->
         
         <!-- logo redpers -->
         <a href="index.html"><img class= logo-boven src= ../assets/image-redpers.png alt="logo-redpers" width="140" height="35"></a>
@@ -60,10 +60,47 @@
             
     </header>
 
+    <main>
+        <section class="frontpage-news">
+            <p class="category-frontpage">Binnenland</p>
+            <h1 class="title-article">Een metalen ode aan de Utrechtse gastarbeiders </h1>
+            <p class="text_intro">Kunstenaar Aimée Zito Lema ontwierp een kunstwerk als eerbetoon aan de gastarbeiders uit de jaren ‘60 en ‘70. Ze deed dit in samenwerking met de nakomelingen, die willen dat het werk van hun voorouders niet ongezien blijft. 'Wij willen ze niet vergeten en de generaties na ons moeten ze ook niet vergeten.'</p>
+            <p class="author">Door <strong>Thalia Pinidis</strong></p>
+            <img class="frontpage-image" src="../assets/voorpagina.jpg" alt="foto van fridrankblik" width="520" height="320">
+        </section>
+
+        <section class="carosel-1">
+            <h2 class="category-caro">Binnenland</h2>
+            <ul class="carosel-binnenland">
+                <li>
+                   <img src="./assets/demonstraties.jpg" alt="foto van demonstrerende mensen">
+                   <a href="https://redpers.nl/2024/11/20/demonstraties-tegen-het-verdwijnen-van-taal-en-cultuurstudies-mijn-hart-brak-toen-ik-het-hoorde/">Demonstraties tegen het verdwijnen van taal- en cultuurstudies: ‘Mijn hart brak toen ik het hoorde’</a>
+                   <p>Door: Gastbijdrage</p>
+                </li>
+
+                <li>
+                    <img src="./assets/studentensport.png" alt="foto van geillustreerde mensen in neonlicht">
+                    <a href="https://redpers.nl/2024/11/15/sportfaciliteiten-voor-studenten-zijn-essentieel-maar-de-toekomst-is-onzeker/">Sportfaciliteiten voor studenten zijn essentieel, maar de toekomst is onzeker.</a>
+                    <p>Door: Esther Broenink</p>
+                 </li>
+
+                 <li>
+                    <img src="./assets/rokkyhorror.png" alt="foto van dansende mensen">
+                    <a href="https://redpers.nl/2024/11/15/decennia-na-verschijning-blijft-de-halloween-cultklassieker-rocky-horror-belangrijk-voor-de-queer-community-rocky-horror-is-de-plek-waar-ik-anders-kan-zijn-dan-overdag/">Rocky Horror: decennia later nog steeds een cultklassieker voor de queer community</a>
+                    <p>Door: Siem Rothengatter</p>
+                 </li>
+
+                 <li>
+                    <img src="./assets/broodregeling.png" alt="foto van dansende mensen">
+                    <a href="https://redpers.nl/2024/10/30/zorgen-om-het-einde-van-de-bed-bad-broodregeling-het-gaat-niet-voor-meer-terugkeer-zorgen/">Zorgen om het einde van de bed-bad-broodregeling: ‘Het gaat niet voor meer terugkeer zorgen’</a>
+                    <p>Door: Floor Adriaanse</p>
+                 </li>
+            </ul>
 
 
+        </section>
+    </main>
 
-
-<script src="scripts/index.js" defer></script>
+<script src="scripts/index.js"></script>
 </body>
 </html>
