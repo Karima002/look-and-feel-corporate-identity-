@@ -1,18 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /* CSS voor de header en navigatiebar */
 header {
     display: flex; /*elementen in de header gaan flexen*/
     justify-content:space-between; /*geeft spacing tussen de items*/
     align-items:center; /* Zorgt ervoor dat alle items in de header verticaal gecentreerd worden binnen de hoogte van de header. */
-    position: sticky; /* Zorgt ervoor dat de header vast blijft staan bovenaan de pagina wanneer je scrollt. */
     top:0; /* Geeft aan dat de header zich aan de bovenkant van het scherm blijft wanneer hij 'sticky' is. */
-    background-color: white;
+    background-color: var(--white);
+    height: 4em;
         @media (min-width:46em) {
+            flex-wrap: wrap;
+
             button {
                 display: none; /*Op een width van 48em (736px) passen alle menubalk knoppen. Op dat moment is de menbalk-icoon niet meer nodig. Deze wordt hiermee verbor*/
             }
             nav button {
                 display: none;
-            } 
+            }    
         }
 }
 
@@ -21,6 +28,7 @@ button {
     cursor: pointer;
 }
 
+/* CSS voor navigatie */
 nav {
     position: fixed;
     left:0; /*navigatiebar beslaat gehele scherm*/
@@ -29,9 +37,11 @@ nav {
     bottom:0;
     translate:-100% 0%; /*de navigatiebar uit beeld schuiven met translate. De nav beweegt zijn eigen breedte 100% naa links.*/
     transition: translate .3s; /*Menu komt binnen .3sec in beeld*/
+    background-color: var(--white);
         @media (min-width: 46em) { /*De nav weer op zijn ‘normale’ plek zetten als het scherm groter wordt*/
         translate:unset;
         padding:0;
+        display: contents;
         }
 }
 
@@ -41,21 +51,25 @@ nav.toonMenu { /*aangemaakte class in javascript*/
 
 
 nav .first-nav {
+    padding-left: 2em;
+    padding-top: 2em;
+    background-color: var(--white);
     @media (min-width: 46em) {
-        background-color: var(--black); /* Zwarte achtergrondkleur voor de eerste navigatiebalk: variabel uit de gezamenlijke stylesheet */
-        margin-top: .6em; /*De svg stond niet op de goede plaats. Hiermee is de svg op de goede plek gepositioneerd*/
-    }
-}
-
-nav .first-nav ul {
-    @media (max-width: 46em) {
         display: flex; /* Flexbox zorgt ervoor dat de lijstitems naast elkaar worden geplaatst */
         justify-content: flex-end; /* De content wordt aan de rechterkant uitgelijnd */
         gap: 1em; /* Er is een ruimte van 1em tussen de items */
+        width: 100%;
+        background-color: var(--black); /*Zwarte achtergrondkleur voor de eerste navigatiebalk: variabel uit de gezamenlijke stylesheet */
+        top: 10px;
+        padding-top: 0; /*Padding-top op 0 bij groot scherm*/
     }
 }
 
 nav .first-nav a {
+    text-decoration: none;
+    color:var(--black); 
+    font-family: var(--font-default); 
+    font-size: var(--font-size-menu);
     @media (min-width: 46em) {
         display: flex;
         justify-content: right;
@@ -72,6 +86,25 @@ ul {
     list-style: none;
 }
     
+.second-nav {
+    padding-left: 2em;
+    @media (min-width: 46em) {
+        border: solid #fff .5px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
+        background-color: var(--white);
+        margin-top: 1em;
+    }
+}
+
+nav ul.second-nav {
+    @media (min-width: 46em) {
+        display: flex;
+        justify-content: center; /*lijstitems worden gecentreerd met een ruimte van 1em tussen de items */
+        gap: 1em; 
+        order: 1;
+        width: 100%;
+        border: solid #E1E1E1 .5px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
+    }
+}
 .second-nav a{
     text-decoration: none; /* De links in de tweede navigatiebalk hebben geen onderstreping */
     color: black;
@@ -80,10 +113,67 @@ ul {
     font-size: 13px; 
 }
 
-.frontpage-image {
-    align-items: center;
+
+
+/* CSS voor de logo, ondertitel, en doneerknop */
+.section-logo-boven {
+    display: flex;
+    align-items:center; 
+    @media (min-width: 46em) {
+        display: grid;
+        grid-template-areas: 
+        "logo doneren zoeken"
+        "tekst doneren zoeken";
+        grid-template-columns: 7.5fr .5fr .5fr;
+        grid-template-rows: 1fr 1fr;
+        background-color: var(--white);
+        width: 100%; /*neemt gehele scherm in beslag*/
+        margin-top: 1em;
+        margin-left: 1.1em;
+    }
 }
-/* CSS voor de main: voorpaginan nieuws */
+
+.logo-above {
+    flex-grow:1; 
+    justify-content:center;
+    padding: 0;
+    @media (min-width: 46em) {
+        grid-area: logo;
+        padding-left: .5em;
+    }
+}
+
+.ondertitel-logo {
+    display: none;
+    @media (min-width: 46em) {
+        display: block;
+        grid-area: tekst;
+        font-family: var(--font-default);
+        font-size: var(--font-size-menu);
+        text-transform: uppercase; 
+        
+    }
+}
+
+.button-doneren {
+    display: none;
+    @media (min-width: 46em) {
+        display: block;
+        grid-area: doneren;
+    }
+}
+
+.search-button {
+    flex-grow:1; 
+    @media (min-width: 46em) {
+        grid-area: zoeken;
+        place-content: right;
+        padding-left: 1em;
+    }
+}
+
+
+/* CSS voor de main: voorpagina nieuws */
 
 .frontpage-news {
     padding: 1em 1em 0 1em; /*De hoofdsectie heeft padding aan de boven-, rechter- en linkerzijde: met de klok mee:*/
@@ -98,8 +188,7 @@ ul {
         "text4 img";
         row-gap: .7em; /* Ruimte tussen rijen */
         column-gap: 4em; /* Ruimte tussen kolommen */
-
-            padding: 7em 7em 0 6em;
+        padding: 14em 7em 6em 6em;
     } 
 }
 
@@ -113,7 +202,6 @@ ul {
         @media (min-width: 46em) {
             text-align: left;
             grid-area: text1; /* Positie van een area in de grid */
-            
         }
     }
 
@@ -135,7 +223,7 @@ ul {
             display: block;
             grid-area: text3;
             font-family: var(--font-default); /* De ondertitel wordt weergegeven in het Inter-lettertype, 16px groot */
-        font-size: var(--font-size-intro);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
+            font-size: var(--font-size-intro);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
         }        
 }
 
@@ -152,7 +240,6 @@ ul {
 .frontpage-image {
     @media (min-width: 46em) {
         grid-area: img;
-        padding-top: 5em;
     }
 }
 
@@ -161,6 +248,9 @@ ul {
 .category-caro {
     font-family: var(--font-default);
     font-weight: 300;
+    border-top: solid #E1E1E1 .10px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
+    padding-top: 1em;
+    
 }
 
 .carosel-1 {
@@ -184,6 +274,13 @@ ul {
 .h3 {
     text-decoration: none;  /* Verwijdert de onderstreping van de link */
     font-weight: 710;
+}
+
+.author-article {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    font-family: var(--font-default);
+    font-size: var(--font-size-header-xs);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
 }
 
 /* CSS voor de footer */
