@@ -171,3 +171,45 @@ nav ul.second-nav {
         padding-left: 1em;
     }
 }
+
+
+/* CSS voor de main */
+
+main {
+    padding: 5em;
+    @media (min-width: 46em) {
+        padding: 13em 28em 5em 7em;
+    }
+}
+
+h1 {
+    border-bottom: solid var(--lightgrey) .095em;
+    padding-bottom: 1em;
+}
+
+form {
+    padding-top: 2em;
+
+}
+
+form:not(.form_search) {
+    input:not([type="submit"]), textarea {
+        outline: 2px solid var(--darkgreygrey);
+        background-color: var(--grey);
+    }
+}
+
+form:not(.form_search) {
+    fieldset {
+        color: var(--black);
+        border: 1px solid var(--lightgrey);
+        background-color: var(--lightgrey);
+    }
+}
+
+form:not(.form_search) {
+    input:not([type="submit"]), textarea {
+        color: var(--black);
+        max-width: 100%;
+    }
+}
