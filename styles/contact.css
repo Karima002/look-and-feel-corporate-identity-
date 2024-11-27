@@ -3,10 +3,47 @@
     padding: 0;
 }
 
+@media (prefers-color-scheme:dark) {
+    body {
+        /* --- COLORS --- */
+
+        /* -- PRIMARY COLOR (RED) -- */
+        --primary-color: rgb(232, 83, 64); /* #E85340 */
+        --primary-color-light: rgb(249, 205, 200); /* #F9CDC8 */
+        --primary-color-lighter: rgb(249, 212, 207); /* #F9D4CF */
+        --primary-color-lightest: rgb(255, 244, 242); /* #FFF4F2 */
+        --primary-color-accent: rgb(175, 114, 107); /* #AF726B */ /* Bruinrood */
+
+        /* -- SECONDARY COLOR (GREEN) -- */
+        --secondary-color: rgb(244, 251, 233); /* #F4FBE9 */
+        --secondary-color-dark: rgb(129, 165, 72); /* #81A548 */
+
+        /* Grijstinten */
+        --black: #fff; /* #000000 */
+        --black-opacity: rgba(0, 0, 0, 0.71); /* #000000B5 */
+        --white: #222; /* #FFFFFF */
+        --black-author: rgb(68, 68, 68); /* #444444 */
+        --grey: #aaaaaa;
+        --darkgrey: rgb(123, 123, 122); /* #7B7B7A */
+        --lightgrey: rgb(225, 225, 225); /* #E1E1E1 */
+
+
+        --background: #222;
+        --color: #fff;
+        --border: #1D1D1D;
+
+    }    
+}
+
+body {
+    background-color: var(--background);
+    color: var(--color);
+}
+
 /* CSS voor de header en navigatiebar */
 header {
     display: flex; /*elementen in de header gaan flexen*/
-    justify-content:space-between; /*geeft spacing tussen de items*/
+    /* justify-content:space-between; geeft spacing tussen de items */
     align-items:center; /* Zorgt ervoor dat alle items in de header verticaal gecentreerd worden binnen de hoogte van de header. */
     top:0; /* Geeft aan dat de header zich aan de bovenkant van het scherm blijft wanneer hij 'sticky' is. */
     background-color: var(--white);
@@ -63,6 +100,9 @@ nav .first-nav {
         top: 10px;
         padding-top: 0; /*Padding-top op 0 bij groot scherm*/
     }
+    @media (prefers-color-scheme:dark) {
+        background-color: var(--background);
+    }
 }
 
 nav .first-nav a {
@@ -73,12 +113,15 @@ nav .first-nav a {
     @media (min-width: 46em) {
         display: flex;
         justify-content: right;
-        color:var(--white); 
+        color: var(--white); 
         line-height: 3em; /* De hoogte van de tekstregel is 3em voor verticale uitlijning */
         font-size: var(--font-size-menu); /* De tekengrootte is 11px */
         text-decoration: none; /* Onderstreping van de tekst is uitgeschakeld */
         font-family: var(--font-default);  /* Lettertype wordt bepaald door de variabel uit de gezamenlijke stylesheet  */
         margin-right: 1em; /* Voegt ruimte toe aan de rechterkant van de svg */
+    }
+    @media (prefers-color-scheme:dark) {
+        color: var(--color);
     }
 }
 
@@ -93,7 +136,8 @@ ul {
         background-color: var(--white);
         margin-top: 1em;
     }
-}
+    }
+    
 
 nav ul.second-nav {
     @media (min-width: 46em) {
@@ -103,6 +147,10 @@ nav ul.second-nav {
         order: 1;
         width: 100%;
         border: solid #E1E1E1 .5px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
+        @media (prefers-color-scheme:dark) {
+            border: var(--border);
+            border: solid var(--border) .5px;
+        }
     }
 }
 .second-nav a{
@@ -111,6 +159,9 @@ nav ul.second-nav {
     line-height: 2.5em;
     font-family: "Inter", sans-serif; /* Tekst wordt weergegeven in het Inter-lettertype, 13px groot */
     font-size: 13px; 
+    @media (prefers-color-scheme:dark) {
+        color: var(--color);
+    }
 }
 
 
@@ -118,6 +169,7 @@ nav ul.second-nav {
 /* CSS voor de logo, ondertitel, en doneerknop */
 .section-logo-boven {
     display: flex;
+    flex-grow: 1;
     align-items:center; 
     @media (min-width: 46em) {
         display: grid;
@@ -133,13 +185,35 @@ nav ul.second-nav {
     }
 }
 
+.logo-link {
+    margin-inline: auto; /*wordt toegepast om een element horizontaal te centreren in zijn container. Voor nu gebruikt om de logo te centreren in mobiele versie*/
+    @media (min-width: 46em) {
+        margin-inline: unset; /*door de margin-inline op unset te zetten kan */
+    }
+    @media (prefers-color-scheme: dark) {
+        display: none;
+    }
+}
+ 
 .logo-above {
-    flex-grow:1; 
+    /* flex-grow:1; na een code-review bleek dat flex-grow ervoor zorgt dat de logo niet in het midden komt te staan */
     justify-content:center;
     padding: 0;
     @media (min-width: 46em) {
         grid-area: logo;
         padding-left: .5em;
+    }
+}
+
+
+/* CSS voor logo in darkmode */
+.logo-white {
+    @media (prefers-color-scheme: dark) {
+        display: blok;
+        padding-left: .5em;
+    }
+    @media (prefers-color-scheme: light) {
+        display: none;
     }
 }
 
@@ -151,8 +225,12 @@ nav ul.second-nav {
         font-family: var(--font-default);
         font-size: var(--font-size-menu);
         text-transform: uppercase; 
-        
+        color: var(--black-opacity);
+        @media (prefers-color-scheme: dark) {
+        color: var(--black);
+    }   
     }
+    
 }
 
 .button-doneren {
@@ -164,13 +242,14 @@ nav ul.second-nav {
 }
 
 .search-button {
-    flex-grow:1; 
+    /* flex-grow:1;  */
     @media (min-width: 46em) {
         grid-area: zoeken;
         place-content: right;
         padding-left: 1em;
     }
 }
+
 
 
 /* CSS voor de main */
@@ -194,22 +273,33 @@ form {
 
 form:not(.form_search) {
     input:not([type="submit"]), textarea {
+        @media (prefers-color-scheme: light) {
         outline: 2px solid var(--darkgreygrey);
         background-color: var(--grey);
+        }
+        @media (prefers-color-scheme: dark ) {
+            background-color: var(--border);
+        }
     }
 }
 
 form:not(.form_search) {
     fieldset {
+        @media (prefers-color-scheme: light) {
         color: var(--black);
         border: 1px solid var(--lightgrey);
         background-color: var(--lightgrey);
+        }
+        @media (prefers-color-scheme: dark ) {
+            background-color: var(--background);
+        }
     }
 }
 
 form:not(.form_search) {
     input:not([type="submit"]), textarea {
         color: var(--black);
-        max-width: 100%;
+        width: 95%;
     }
 }
+
