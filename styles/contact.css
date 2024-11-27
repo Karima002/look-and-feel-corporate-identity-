@@ -184,7 +184,6 @@ nav ul.second-nav {
         margin-left: 1.1em;
     }
 }
-
 .logo-link {
     margin-inline: auto; /*wordt toegepast om een element horizontaal te centreren in zijn container. Voor nu gebruikt om de logo te centreren in mobiele versie*/
     @media (min-width: 46em) {
@@ -241,7 +240,6 @@ nav ul.second-nav {
     }
 }
 
-
 .search-button {
     /* flex-grow:1;  */
     @media (min-width: 46em) {
@@ -249,18 +247,9 @@ nav ul.second-nav {
         place-content: right;
         padding-left: 1em;
     }
-    @media (prefers-color-scheme: dark) {
-        display: none;
-    }
 }
 
-.search-button-darkmode {
-    @media (prefers-color-scheme: dark) {
-        grid-area: zoeken;
-        place-content: right;
-        padding-left: 1em;
-    }
-}
+
 
 /* CSS voor de main */
 
@@ -313,3 +302,6 @@ form:not(.form_search) {
     }
 }
 
+.section1 {
+    padding-top: 2em;
+}
