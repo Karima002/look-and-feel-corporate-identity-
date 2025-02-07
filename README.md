@@ -11,15 +11,30 @@ De kleuren die gebruikt worden door redpers zijn voornamelijk verschillende tint
 
 
 
-## Stylesheet/styleguide
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+## Law of Proximity
+De wet van de nabijheid. Als elementen dicht bij elkaar staan, vinden onze hersenen dat deze bij elkaar horen.
+![image](https://github.com/user-attachments/assets/e6b4199b-e012-45f1-96cb-5cf72e113de4)
 
-## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+Link naar figma bestand: https://www.figma.com/design/d5NUOSEMOLzos6u9STF9qE/Homepage-redpers?node-id=85-85&t=BP6zJKN2F47vBEPc-1
 
-## Bronnen
+Door middel van grid kunnen elementen worden gegroepeerd. Dit principe had ik al toegepast bij de groepering per categorie:
+![image](https://github.com/user-attachments/assets/1b13cb51-fb8c-4315-8d9a-df3f1cc9b4fa)
+
+
+## Law of Common Region 
+De wet van continuïteit. We zien losse figuren die naast elkaar in een lijn of bocht lopen als een geheel. Elementen hebben de neiging om in groepen te worden waargenomen als ze een gebied delen met een duidelijk gedefinieerde grens.
+![image](https://github.com/user-attachments/assets/b3dc942a-bfa6-436b-b057-3684be174d0f)
+
+Dit principe werd toegepast in mijn contactpagina. Ik heb ervoor gezorgd dat er een kader is zodat duidelijk is voor de gebruiker dat de invoervelden aan elkaar gerelateerd zijn
+
+
+## Dark mode
+Light/dark theme toegevoegd door middel van `@media prefers: dark `
+https://github.com/Karima002/look-and-feel-corporate-identity-/blob/1c215aa0a14d81a7320b8362813ad2942fffa5e5/styles/style.css#L6-L37
+https://github.com/Karima002/look-and-feel-corporate-identity-/blob/1c215aa0a14d81a7320b8362813ad2942fffa5e5/styles/style.css#L142-L155
+
+![image](https://github.com/user-attachments/assets/18c6f366-b953-48b7-9386-b9e380a54df5)
+
 
 ## Licentie
 
